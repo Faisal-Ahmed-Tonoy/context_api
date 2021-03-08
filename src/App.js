@@ -9,11 +9,11 @@ import React, { createContext, useState } from 'react';
 export const CategoryContext =createContext();
 
 function App() {
-  const [count,setCount]=useState(0);
+  const [category,setCategory]=useState(0);
   return (
-    <CategoryContext.Provider value={count}>
-      <h4>Count Value:{count}</h4>
-      <Header count={count} setCount={setCount}></Header>
+    <CategoryContext.Provider value={[category,setCategory]}>
+      <h4>Count Value:{category}</h4>
+      <Header></Header>
       <Home></Home>
       <Shipment></Shipment>
        
